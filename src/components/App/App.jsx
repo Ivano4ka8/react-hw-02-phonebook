@@ -3,7 +3,6 @@ import { ContactsForm } from 'components/ContactsForm/ContactsForm';
 import { ContactsList } from 'components/ContactsList/ContactList';
 import { FilterContacts } from 'components/FilterContacts/FilterContacts';
 import { SectionComponent } from 'components/Section/Section';
-import Notiflix from 'notiflix';
 
 export class App extends Component {
   state = {

@@ -36,13 +36,6 @@ export class App extends Component {
     });
   };
 
-  filterContacts = () => {
-    const { contacts, filter } = this.state;
-    return contacts.filter(el =>
-      el.name.toLowerCase().includes(filter.toLowerCase())
-    );
-  };
-
   deleteContact = todoId => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== todoId),

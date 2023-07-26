@@ -74,8 +74,5 @@ export class ContactsForm extends Component {
 }
 
 ContactsForm.propTypes = {
-  name: propTypes.string,
-  number: propTypes.number,
-  handleChange: propTypes.func,
   onFormSubmit: propTypes.func,
 };

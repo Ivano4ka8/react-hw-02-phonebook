@@ -25,7 +25,7 @@ ContactsList.propTypes = {
       id: propTypes.string,
       name: propTypes.string,
       number: propTypes.number,
-      onDeleteContact: propTypes.func,
     })
   ),
+  onDeleteContact: propTypes.func,
 };

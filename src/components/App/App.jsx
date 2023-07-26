@@ -2,6 +2,8 @@ import { Component } from 'react';
 import { ContactsForm } from 'components/ContactsForm/ContactsForm';
 import { ContactsList } from 'components/ContactsList/ContactList';
 import { FilterContacts } from 'components/FilterContacts/FilterContacts';
+import { SectionComponent } from 'components/Section/Section';
+import Notiflix from 'notiflix';
 
 export class App extends Component {
   state = {
@@ -58,12 +60,18 @@ export class App extends Component {
 
     return (
       <>
-        <ContactsForm onSubmit={this.addContact} />
-        <FilterContacts filterChange={this.filterChange} filter={filter} />
-        <ContactsList
-          contacts={filteredContactList}
-          onDeleteContact={this.deleteContact}
-        />
+        <SectionComponent title="Add contact">
+          <ContactsForm onSubmit={this.addContact} />
+        </SectionComponent>
+        <SectionComponent title="Filter contacts">
+          <FilterContacts filterChange={this.filterChange} filter={filter} />
+        </SectionComponent>
+        <SectionComponent title="Your Phonebook">
+          <ContactsList
+            contacts={filteredContactList}
+            onDeleteContact={this.deleteContact}
+          />
+        </SectionComponent>
       </>
     );
   }
